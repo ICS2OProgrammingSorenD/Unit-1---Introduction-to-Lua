@@ -4,7 +4,7 @@
 --Title:Area of a rectangle and Circle
 --Name:Soren Drew
 --Course:ICS20/3C
---This program displys a rectangle and shows it's area
+--This program displys a rectangleand circle and shows their area
 
 --create my local variable
 local areaTextRectangle
