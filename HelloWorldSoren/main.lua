@@ -17,9 +17,10 @@ display.setStatusBar(display.HiddenStatusBar)
 --sets the background colour
 display.setDefault("background",0/255,0/255,204/255)
 
---create local variable
+--create local variables
 local textObject
-
+local funSong = audio.loadSound( "Sounds/funSong.mp3" )
+local funSongChannel
 --display text on the screen at position x = 400 and y = 350 with
 --a default font style and font size of 50
 textObject = display.newText("Hello World!",400,350,nil,80)
@@ -29,3 +30,6 @@ textObject:setTextColor(0/255,0/255,0/255)
 
 --display text on the screen at position x = 400 and y = 380
 textObject = display.newText("By:Soren Drew",400,420,nil,60)
+
+--play background music
+funSongChannel = audio.play(funSong)

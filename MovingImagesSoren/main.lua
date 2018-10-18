@@ -82,6 +82,10 @@ Star:scale( 2, 2 )
 --set the scroll speed for the star
 scrollSpeedStar = 3
 
+--create the local variables for sound
+local swooshSound = audio.loadSound( "Sounds/swoosh.mp3")
+local swooshSoundChannel
+
 --Function: MoveStar
 --Input: this function accepts an event listener
 --Output none
@@ -91,8 +95,9 @@ local function MoveStar(event)
 	Star.x = Star.x + scrollSpeedStar
 	--adds the scroll speed to the y-value of the star
 	Star.y = Star.y - scrollSpeedStar
+	--play the sound effect
+	swooshSoundChannel = audio.play(swooshSound)
 end
 
 --movestar will be called over and over again
 Runtime:addEventListener("enterFrame", MoveStar)
-
