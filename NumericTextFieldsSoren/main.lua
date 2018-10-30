@@ -58,18 +58,6 @@ local gameOver
 -----------------------------------------------------------------------------------------
 --LOCAL FUNCTION
 -----------------------------------------------------------------------------------------
-local function UpdateHearts()
-
-	if (lives == 3) then
-		heart4.isVisible = false
-	elseif (lives == 2 ) then 
-		heart3.isVisible = false
-	elseif (lives == 1) then
-		heart2.isVisible = false
-	elseif (lives == 0) then
-	GameOver()
-	end
-end
 
 local function AskQuestion()
 	--generate random operator (number betwen 1 and 3)
@@ -114,6 +102,24 @@ local function GameOver()
 		AskQuestion()
 	end
 end
+
+
+local function UpdateHearts()
+
+	if (lives == 3) then
+		heart4.isVisible = false
+	elseif (lives == 2 ) then 
+		heart3.isVisible = false
+	elseif (lives == 1) then
+		heart2.isVisible = false
+	elseif (lives == 0) then
+	GameOver()
+	end
+end
+
+
+
+
 
 local function UpdateTime()
 
@@ -178,12 +184,12 @@ local function NumericFieldListener( event )
 			correctSoundChannel = audio.play(correctSound)
 			numberPoints = numberPoints + 1
 			pointsObject.text = "Points:" .. numberPoints
-			timer.performWithDelay(500, HideCorrect)
+			timer.performWithDelay(1000, HideCorrect)
 		else 
 			correctObject.isVisible = false 
 			incorrectObject.isVisible = true
 			incorrectSoundChannel = audio.play(incorrectSound)
-			timer.performWithDelay(500, HideIncorrect) 
+			timer.performWithDelay(1000, HideIncorrect) 
 			lives = lives - 1 
 			UpdateHearts()
 		end

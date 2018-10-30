@@ -1,0 +1,2741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0040)https://freesound.org/browse/tags/punch/ -->
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        
+        <meta name="description" content="Freesound: collaborative database of creative-commons licensed sound for musicians and sound lovers. Have you freed your sound today?">
+        <meta name="keywords" content="free, sound">
+        <link rel="stylesheet" type="text/css" href="./Freesound - tags_files/all.css">
+        <!--[if IE 6]><link rel="stylesheet" type="text/css" href="/media/css/ie6.css?v=2510" /><![endif]-->
+        <link rel="icon" href="https://freesound.org/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://freesound.org/apple-touch-icon.png">
+	<link rel="manifest" href="https://freesound.org/site.webmanifest">
+	<link rel="mask-icon" href="https://freesound.org/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+        <title>Freesound - tags</title>
+        <script type="text/javascript" async="" src="./Freesound - tags_files/ga.js.download"></script><script src="./Freesound - tags_files/jquery-1.5.2.min.js.download" type="text/javascript"></script>
+        <script src="./Freesound - tags_files/jquery-ui-1.8.11.custom.min.js.download" type="text/javascript"></script>
+        <script src="./Freesound - tags_files/jquery.cookie.js.download" type="text/javascript"></script>
+        <script src="./Freesound - tags_files/swfobject.js.download" type="text/javascript"></script>
+        <script src="./Freesound - tags_files/jquery.watermarkinput.js.download" type="text/javascript"></script>
+        <script type="text/javascript">
+            var isLoggedIn = false;
+            var loginUrl = "/home/login/?next=/browse/tags/punch/";
+            $(document).ready(function() {
+                 $("#search input[name=q]").Watermark("search sounds");
+            });
+            function clearWatermark(){
+			   $.Watermark.HideAll()
+			   return true
+			}
+        </script>
+        <script src="./Freesound - tags_files/freesound.js.download" type="text/javascript"></script>
+    	<script src="./Freesound - tags_files/ajax_utils.js.download" type="text/javascript"></script>
+        <!-- next couple of lines are used for the HTML player -->
+        <link href="./Freesound - tags_files/css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./Freesound - tags_files/player.css">
+        <script src="./Freesound - tags_files/soundmanager2.js.download"></script>
+        <script type="text/javascript" src="./Freesound - tags_files/player.js.download"></script>
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-86270-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+        
+    </head>
+
+    <body id="" onload="" onunload="">
+
+        
+
+
+        <div id="header">
+            <div id="account_nav">
+                
+                    <a href="https://freesound.org/home/register/">Register</a>
+                    <a href="https://freesound.org/home/login/?next=/browse/tags/punch/">Log In</a>
+                
+            <a href="https://freesound.org/home/upload/" id="upload_button"></a>
+        </div>
+
+        <a href="https://freesound.org/" id="logo"></a>
+
+        <div id="search">
+        <form method="get" onsubmit="return clearWatermark()" action="https://freesound.org/search/">
+            <fieldset>
+               <input type="text" name="q" value="" size="30" style="color: rgb(170, 170, 170);">
+               <input type="submit" value="" id="search_submit">
+            </fieldset>
+        </form>
+        </div>
+
+        <ul id="site_nav">
+            
+            <li class="active_tab"><a href="https://freesound.org/browse/" id="site_nav_sounds"><span class="site_nav_icon"></span>Sounds</a></li>
+            <li class=""><a href="https://freesound.org/forum/" id="site_nav_forums"><span class="site_nav_icon"></span>Forums</a></li>
+            <li class=""><a href="https://freesound.org/people/" id="site_nav_people"><span class="site_nav_icon"></span>People</a></li>
+            <li class=""><a href="https://freesound.org/help/faq/" id="site_nav_help"><span class="site_nav_icon"></span>Help</a></li>
+
+        </ul>
+    </div>
+
+        <div id="wrapper">
+        <div id="container">
+
+        
+
+        
+<div id="content_full"> <!-- START of Content area -->
+
+
+    <script type="text/javascript">
+        function follow_tags() {
+            $("#follow_tags_button").attr("disabled", "disabled");
+            $.ajax({
+                type: 'POST',
+                url: '/follow/follow_tags/punch/',
+                success: function() {
+                    $("#follow_tags_button").removeAttr("disabled");
+                    $("#now_following_tags_div").show();
+                    $("#follow_tags_link").removeAttr("onclick");
+                    $("#follow_tags_button").text("Unfollow tag");
+                    $("#follow_tags_link").unbind("click").click(unfollow_tags);
+                },
+                error: function(data) {
+                    $("#follow_tags_button").removeAttr("disabled");
+                    $("#follow_tags_error_message").show();
+                    window.setTimeout(function(){
+                        $("#follow_tags_error_message").fadeOut(200);
+                    }, 3000);
+                }
+            });
+        }
+
+        function unfollow_tags() {
+            $("#follow_tags_button").attr("disabled", "disabled");
+            $.ajax({
+                type: 'POST',
+                url: '/follow/unfollow_tags/punch/',
+                success: function() {
+                    $("#follow_tags_button").removeAttr("disabled");
+                    $("#follow_tags_link").removeAttr("onclick");
+                    $("#follow_tags_button").text("Follow tag");
+                    $("#follow_tags_link").unbind("click").click(follow_tags);
+                    $("#now_following_tags_div").hide();
+                },
+                error: function(data) {
+                    $("#follow_tags_button").removeAttr("disabled");
+                    $("#follow_tags_error_message").show();
+                    window.setTimeout(function(){
+                        $("#follow_tags_error_message").fadeOut(200);
+                    }, 3000);
+                }
+            });
+        }
+
+    </script>
+
+    
+        <h1>Tags</h1>
+    
+
+    
+
+        
+
+            <div class="tagcloud">
+                
+                    <span style="font-size:1.12058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/air/">air</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/air/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.57352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/attack/">attack</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/attack/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.861764705882em;">
+                        
+                            <a href="https://freesound.org/browse/tags/bamboo/">bamboo</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/bamboo/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/bang/">bang</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/bang/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/bash/">bash</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/bash/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.41176470588em;">
+                        
+                            <a href="https://freesound.org/browse/tags/bass/">bass</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/bass/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.37941176471em;">
+                        
+                            <a href="https://freesound.org/browse/tags/beat/">beat</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/beat/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.861764705882em;">
+                        
+                            <a href="https://freesound.org/browse/tags/blood/">blood</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/blood/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.18529411765em;">
+                        
+                            <a href="https://freesound.org/browse/tags/body/">body</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/body/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.861764705882em;">
+                        
+                            <a href="https://freesound.org/browse/tags/bone/">bone</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/bone/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.958823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/bones/">bones</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/bones/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.926470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/boom/">boom</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/boom/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/box/">box</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/box/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/boxing/">boxing</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/boxing/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.12058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/break/">break</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/break/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.829411764706em;">
+                        
+                            <a href="https://freesound.org/browse/tags/cinematic/">cinematic</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/cinematic/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/club/">club</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/club/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.829411764706em;">
+                        
+                            <a href="https://freesound.org/browse/tags/collision/">collision</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/collision/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.926470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/combat/">combat</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/combat/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.894117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/crack/">crack</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/crack/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.02352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/crunch/">crunch</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/crunch/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.829411764706em;">
+                        
+                            <a href="https://freesound.org/browse/tags/dance/">dance</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/dance/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/death/">death</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/death/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/door/">door</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/door/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/drop/">drop</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/drop/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.50882352941em;">
+                        
+                            <a href="https://freesound.org/browse/tags/drum/">drum</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/drum/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/drumming/">drumming</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/drumming/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.991176470588em;">
+                        
+                            <a href="https://freesound.org/browse/tags/drums/">drums</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/drums/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.732352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/electro/">electro</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/electro/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/electronic/">electronic</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/electronic/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/face/">face</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/face/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fall/">fall</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fall/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fast/">fast</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fast/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.732352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fat/">fat</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fat/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.732352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/field-recording/">field-recording</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/field-recording/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.73529411765em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fight/">fight</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fight/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.25em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fighting/">fighting</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fighting/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.60588235294em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fist/">fist</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fist/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.02352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/flesh/">flesh</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/flesh/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/flup/">flup</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/flup/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.958823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/foley/">foley</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/foley/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/fu/">fu</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/fu/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.861764705882em;">
+                        
+                            <a href="https://freesound.org/browse/tags/game/">game</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/game/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/grunt/">grunt</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/grunt/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.34705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/hard/">hard</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/hard/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.926470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/heavy/">heavy</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/heavy/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.76764705882em;">
+                        
+                            <a href="https://freesound.org/browse/tags/hit/">hit</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/hit/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.08823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/hitting/">hitting</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/hitting/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/house/">house</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/house/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.958823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/human/">human</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/human/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.02352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/hurt/">hurt</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/hurt/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.63823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/impact/">impact</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/impact/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/industrial/">industrial</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/industrial/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.70294117647em;">
+                        
+                            <a href="https://freesound.org/browse/tags/kick/">kick</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/kick/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/loop/">loop</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/loop/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/low/">low</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/low/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/male/">male</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/male/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/martial-arts/">martial-arts</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/martial-arts/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.28235294118em;">
+                        
+                            <a href="https://freesound.org/browse/tags/metal/">metal</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/metal/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.7em;">
+                        
+                            <a href="https://freesound.org/browse/tags/metallic/">metallic</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/metallic/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/noise/">noise</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/noise/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.05588235294em;">
+                        
+                            <a href="https://freesound.org/browse/tags/oneshot/">oneshot</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/oneshot/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.926470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/ouch/">ouch</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/ouch/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.894117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/owi/">owi</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/owi/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.08823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/pain/">pain</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/pain/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/pow/">pow</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/pow/punch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.8em;">
+                        
+                            
+                            punch<span class="tag_addremove"><a href="https://freesound.org/browse/tags/">-</a></span>
+                            
+                        
+                    </span>
+                
+                    <span style="font-size:1.31470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/punching/">punching</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/punching/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.829411764706em;">
+                        
+                            <a href="https://freesound.org/browse/tags/punchy/">punchy</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/punchy/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.02352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/records/">records</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/records/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.02352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/reverb/">reverb</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/reverb/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.732352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/room/">room</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/room/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.926470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/sample/">sample</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/sample/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/sfx/">sfx</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/sfx/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/slam/">slam</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/slam/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.67058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/slap/">slap</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/slap/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.54117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/smack/">smack</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/smack/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.05588235294em;">
+                        
+                            <a href="https://freesound.org/browse/tags/smash/">smash</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/smash/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.894117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/snare/">snare</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/snare/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.894117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/sound/">sound</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/sound/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/stick/">stick</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/stick/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.05588235294em;">
+                        
+                            <a href="https://freesound.org/browse/tags/strike/">strike</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/strike/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.829411764706em;">
+                        
+                            <a href="https://freesound.org/browse/tags/swash/">swash</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/swash/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/swhish/">swhish</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/swhish/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.08823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/swing/">swing</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/swing/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.958823529412em;">
+                        
+                            <a href="https://freesound.org/browse/tags/swish/">swish</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/swish/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.21764705882em;">
+                        
+                            <a href="https://freesound.org/browse/tags/swoosh/">swoosh</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/swoosh/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/swosh/">swosh</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/swosh/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.47647058824em;">
+                        
+                            <a href="https://freesound.org/browse/tags/thud/">thud</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/thud/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.894117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/thump/">thump</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/thump/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/thwack/">thwack</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/thwack/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.732352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/wet/">wet</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/wet/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.02352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/whack/">whack</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/whack/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.54117647059em;">
+                        
+                            <a href="https://freesound.org/browse/tags/whip/">whip</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/whip/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.44411764706em;">
+                        
+                            <a href="https://freesound.org/browse/tags/whoosh/">whoosh</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/whoosh/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.797058823529em;">
+                        
+                            <a href="https://freesound.org/browse/tags/wind/">wind</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/wind/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.732352941176em;">
+                        
+                            <a href="https://freesound.org/browse/tags/wisch/">wisch</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/wisch/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:0.764705882353em;">
+                        
+                            <a href="https://freesound.org/browse/tags/wish/">wish</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/wish/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.15294117647em;">
+                        
+                            <a href="https://freesound.org/browse/tags/woosh/">woosh</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/woosh/">+</a></span>
+                        
+                    </span>
+                
+                    <span style="font-size:1.31470588235em;">
+                        
+                            <a href="https://freesound.org/browse/tags/zoom/">zoom</a><span class="tag_addremove"><a href="https://freesound.org/browse/tags/punch/zoom/">+</a></span>
+                        
+                    </span>
+                
+            </div>
+
+        
+
+        
+            <div id="follow_browse_tags">
+
+                <div class="tag_group">
+                    <ul class="tags">
+                    
+                        <li><a>punch</a></li>
+                    
+                    </ul>
+                </div>
+
+                <div style="clear: both"></div>
+
+                
+
+                <div style="clear: both"></div>
+
+                <div id="follow_tags_error_message">An error occurred, please try again</div>
+
+            <div style="clear: both"></div>
+
+            </div>
+
+        
+
+        
+            <h1>Sounds with this tag</h1>
+            
+                <div class="search_paginator">
+                    <ul class="pagination"><li class="disabled-previous-next">previous</li><li class="next-page"><a href="https://freesound.org/browse/tags/punch/?page=2#sound" title="Next Page">next</a></li><li class="current-page">1</li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=2#sound" title="Page 2">2</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=3#sound" title="Page 3">3</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=4#sound" title="Page 4">4</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=5#sound" title="Page 5">5</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=6#sound" title="Page 6">6</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=7#sound" title="Page 7">7</a></li><li class="dots">...</li><li class="last-page"><a href="https://freesound.org/browse/tags/punch/?page=32#sound" title="Last Page">32</a></li><p class="number_of_results">
+            
+                &nbsp;|&nbsp; 860 sounds
+            
+        </p></ul>
+
+
+                </div>
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="60009">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/60/60009_71257-lq.mp3" title="mp3 file">swosh-22.flac - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/60/60009_71257-lq.ogg" title="ogg file">swosh-22.flac - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/60/60009_71257_wave_M.png" title="waveform file">swosh-22.flac - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/60/60009_71257_spec_M.jpg" title="spectrogram file">swosh-22.flac - spectrogram</a>
+<span class="duration" title="duration in seconds">319.501133787</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/60/60009_71257_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:00</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/qubodup/sounds/60009/" title="swosh-22.flac">swosh-22.flac</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:86%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">I use a bamboo stick to generate some wind *swash* slash sounds. Find more similar sounds in the bamboo stick ...</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/air/">air</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/attack/">attack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bamboo/">bamboo</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cut/">cut</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/domain/">domain</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/flup/">flup</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/h2/">h2</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/luft/">luft</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/public/">public</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/public-domain/">public-domain</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stick/">stick</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swash/">swash</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swhish/">swhish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swing/">swing</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swish/">swish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swoosh/">swoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swosh/">swosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/weapon/">weapon</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whoosh/">whoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wind/">wind</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wisch/">wisch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wish/">wish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/woosh/">woosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/zoom/">zoom</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/zoom-h2/">zoom-h2</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_60009" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/qubodup/">qubodup</a><br>
+        <span class="date">September 7th, 2008</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/qubodup/sounds/60009/downloaders/">58785 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/qubodup/sounds/60009/#comments">101 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/qubodup/sounds/60009/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            <a class="pack" href="https://freesound.org/people/qubodup/packs/12143/">
+                <img src="./Freesound - tags_files/folder-open-document-music.png" width="16" height="16" alt="Pack" title="This sound belongs to the pack: Free Whoosh Sound Pack">
+            </a>
+            
+            
+             <a class="remixes" href="https://freesound.org/people/qubodup/sounds/60009/remixes/">
+                <img src="./Freesound - tags_files/remixes.png" width="16" height="16" alt="Remixes" title="This sound has remixes">
+            </a>
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                            
+                            <div class="sample_more_search_results"><img src="./Freesound - tags_files/plus.png" alt=""> <a href="https://freesound.org/search/?q=&amp;f=grouping_pack:%2212143_Free%20Whoosh%20Sound%20Pack%22%20&amp;s=%22%22&amp;g=&amp;advanced=&amp;a_tag=&amp;a_filename=&amp;a_description=&amp;a_packname=&amp;a_soundid=&amp;a_username=">40 more results</a> in the same pack "Free Whoosh Sound Pack"</div>
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="104183">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/104/104183_1690027-lq.mp3" title="mp3 file">punch.wav - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/104/104183_1690027-lq.ogg" title="ogg file">punch.wav - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/104/104183_1690027_wave_M.png" title="waveform file">punch.wav - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/104/104183_1690027_spec_M.jpg" title="spectrogram file">punch.wav - spectrogram</a>
+<span class="duration" title="duration in seconds">1188.23129252</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/104/104183_1690027_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:01</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/Ekokubza123/sounds/104183/" title="punch.wav">punch.wav</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:93%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A sound of a punch.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/boom/">boom</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/jab/">jab</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/oooaaahhz/">oooaaahhz</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/strong/">strong</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_104183" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/Ekokubza123/">Ekokubza123</a><br>
+        <span class="date">September 2nd, 2010</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/Ekokubza123/sounds/104183/downloaders/">56009 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/Ekokubza123/sounds/104183/#comments">204 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/Ekokubza123/sounds/104183/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+             <a class="remixes" href="https://freesound.org/people/Ekokubza123/sounds/104183/remixes/">
+                <img src="./Freesound - tags_files/remixes.png" width="16" height="16" alt="Remixes" title="This sound has remixes">
+            </a>
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="43586">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/43/43586_111920-lq.mp3" title="mp3 file">punches_and_slaps.wav - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/43/43586_111920-lq.ogg" title="ogg file">punches_and_slaps.wav - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/43/43586_111920_wave_M.png" title="waveform file">punches_and_slaps.wav - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/43/43586_111920_spec_M.jpg" title="spectrogram file">punches_and_slaps.wav - spectrogram</a>
+<span class="duration" title="duration in seconds">26080.3628118</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/43/43586_111920_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:26</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/Syna-Max/sounds/43586/" title="punches_and_slaps.wav">punches_and_slaps.wav</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:86%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A remix of scarbelly25's "whip,slap,belt,punch.wav" with mich3d's "Whoosh_Swish_01.wav, Whoosh_Swish_02.wav, Whoosh_Swish_03.wav" sounds. Added punch sounds to the rest of the slaps.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/belt/">belt</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bully/">bully</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/car/">car</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cliche/">cliche</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fight/">fight</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/indy-mogul/">indy-mogul</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/indymogul/">indymogul</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/kick/">kick</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/pain/">pain</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/slap/">slap</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/smack/">smack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sock/">sock</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stereotypical/">stereotypical</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_43586" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/Syna-Max/">Syna-Max</a><br>
+        <span class="date">November 5th, 2007</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/Syna-Max/sounds/43586/downloaders/">50867 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/Syna-Max/sounds/43586/#comments">176 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/Syna-Max/sounds/43586/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+             <a class="remixes" href="https://freesound.org/people/Syna-Max/sounds/43586/remixes/">
+                <img src="./Freesound - tags_files/remixes.png" width="16" height="16" alt="Remixes" title="This sound has remixes">
+            </a>
+            
+            
+            <!-- license icons -->
+            
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/bync.png" height="16" alt="Creative Commons Attribution Non-Commercial license" title="This sound is licensed under the Creative Commons Attribution Non-Commercial license.">
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="45654">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/45/45654_304638-lq.mp3" title="mp3 file">Dun dun dun.wav - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/45/45654_304638-lq.ogg" title="ogg file">Dun dun dun.wav - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/45/45654_304638_wave_M.png" title="waveform file">Dun dun dun.wav - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/45/45654_304638_spec_M.jpg" title="spectrogram file">Dun dun dun.wav - spectrogram</a>
+<span class="duration" title="duration in seconds">5581.40589569</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/45/45654_304638_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:05</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/Simon_Lacelle/sounds/45654/" title="Dun dun dun.wav">Dun dun dun.wav</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:89%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">Dramatic basses and timpani phrase. Request by bobman86 http://freesound.iua.upf.edu/forum/viewtopic.php?t=1212 Created using a custom patch in Reason 4.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/bass/">bass</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/chan/">chan</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/drama/">drama</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/dramatic/">dramatic</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/dun/">dun</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stab/">stab</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/strings/">strings</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/timpani/">timpani</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_45654" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/Simon_Lacelle/">Simon_Lacelle</a><br>
+        <span class="date">December 30th, 2007</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/Simon_Lacelle/sounds/45654/downloaders/">42480 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/Simon_Lacelle/sounds/45654/#comments">105 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/Simon_Lacelle/sounds/45654/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/by.png" width="16" height="16" alt="Creative Commons Attribution license" title="This sound is licensed under the Creative Commons Attribution license.">
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="118513">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/118/118513_2136023-lq.mp3" title="mp3 file">Punch_02.wav - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/118/118513_2136023-lq.ogg" title="ogg file">Punch_02.wav - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/118/118513_2136023_wave_M.png" title="waveform file">Punch_02.wav - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/118/118513_2136023_spec_M.jpg" title="spectrogram file">Punch_02.wav - spectrogram</a>
+<span class="duration" title="duration in seconds">633.968253968</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/118/118513_2136023_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:00</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/thefsoundman/sounds/118513/" title="Punch_02.wav">Punch_02.wav</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:87%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">Punching.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/fighting/">fighting</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hit/">hit</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/loud/">loud</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_118513" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/thefsoundman/">thefsoundman</a><br>
+        <span class="date">April 21st, 2011</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/thefsoundman/sounds/118513/downloaders/">40891 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/thefsoundman/sounds/118513/#comments">67 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/thefsoundman/sounds/118513/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="86019">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/86/86019_1275451-lq.mp3" title="mp3 file">kung fu punch.aif - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/86/86019_1275451-lq.ogg" title="ogg file">kung fu punch.aif - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/86/86019_1275451_wave_M.png" title="waveform file">kung fu punch.aif - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/86/86019_1275451_spec_M.jpg" title="spectrogram file">kung fu punch.aif - spectrogram</a>
+<span class="duration" title="duration in seconds">1418.08333333</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/86/86019_1275451_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:01</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/nextmaking/sounds/86019/" title="kung fu punch.aif">kung fu punch.aif</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:88%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">kung fu punch</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/crack/">crack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fu/">fu</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/kung/">kung</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/pow/">pow</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch2/">punch2</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/slap/">slap</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/smack/">smack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sock/">sock</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swish/">swish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swoosh/">swoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whack/">whack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whoosh/">whoosh</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_86019" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/nextmaking/">nextmaking</a><br>
+        <span class="date">December 19th, 2009</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/nextmaking/sounds/86019/downloaders/">33240 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/nextmaking/sounds/86019/#comments">71 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/nextmaking/sounds/86019/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+                <img class="cc_license" src="./Freesound - tags_files/sampling.png" width="16" height="16" alt="Sampling+ license" title="This sound is licensed under the sampling+ license.">
+            
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="35409">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/35/35409_298165-lq.mp3" title="mp3 file">whip,slap,belt,punch.wav - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/35/35409_298165-lq.ogg" title="ogg file">whip,slap,belt,punch.wav - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/35/35409_298165_wave_M.png" title="waveform file">whip,slap,belt,punch.wav - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/35/35409_298165_spec_M.jpg" title="spectrogram file">whip,slap,belt,punch.wav - spectrogram</a>
+<span class="duration" title="duration in seconds">26076.0090703</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/35/35409_298165_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:26</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/scarbelly25/sounds/35409/" title="whip,slap,belt,punch.wav">whip,slap,belt,punch.wav</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:82%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">a bunch of the kinds of sounds you might expect to hear in a fight</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/attack/">attack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/beat/">beat</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/beating/">beating</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/belt/">belt</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fight/">fight</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/flog/">flog</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/flogging/">flogging</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hurt/">hurt</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/mug/">mug</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/slap/">slap</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_35409" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/scarbelly25/">scarbelly25</a><br>
+        <span class="date">May 28th, 2007</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/scarbelly25/sounds/35409/downloaders/">19150 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/scarbelly25/sounds/35409/#comments">41 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/scarbelly25/sounds/35409/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="89769">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/89/89769_1386366-lq.mp3" title="mp3 file">Fist Punch 3.mp3 - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/89/89769_1386366-lq.ogg" title="ogg file">Fist Punch 3.mp3 - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/89/89769_1386366_wave_M.png" title="waveform file">Fist Punch 3.mp3 - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/89/89769_1386366_spec_M.jpg" title="spectrogram file">Fist Punch 3.mp3 - spectrogram</a>
+<span class="duration" title="duration in seconds">288.979</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/89/89769_1386366_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:00</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/CGEffex/sounds/89769/" title="Fist Punch 3.mp3">Fist Punch 3.mp3</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:81%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A fist Punch sound I made by hitting myself........ouch.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/belt/">belt</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bully/">bully</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cliche/">cliche</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fight/">fight</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fist/">fist</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hit/">hit</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/ouch/">ouch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/pow/">pow</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/puch/">puch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/slap/">slap</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sock/">sock</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stereotypical/">stereotypical</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_89769" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/CGEffex/">CGEffex</a><br>
+        <span class="date">February 7th, 2010</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/CGEffex/sounds/89769/downloaders/">16741 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/CGEffex/sounds/89769/#comments">32 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/CGEffex/sounds/89769/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            <a class="pack" href="https://freesound.org/people/CGEffex/packs/5649/">
+                <img src="./Freesound - tags_files/folder-open-document-music.png" width="16" height="16" alt="Pack" title="This sound belongs to the pack: Weapons &amp; Fighting">
+            </a>
+            
+            
+            
+            <!-- license icons -->
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/by.png" width="16" height="16" alt="Creative Commons Attribution license" title="This sound is licensed under the Creative Commons Attribution license.">
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="232358">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/232/232358_3450800-lq.mp3" title="mp3 file">Heavy Impacts - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/232/232358_3450800-lq.ogg" title="ogg file">Heavy Impacts - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/232/232358_3450800_wave_M.png" title="waveform file">Heavy Impacts - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/232/232358_3450800_spec_M.jpg" title="spectrogram file">Heavy Impacts - spectrogram</a>
+<span class="duration" title="duration in seconds">11842.2</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/232/232358_3450800_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:11</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/RICHERlandTV/sounds/232358/" title="Heavy Impacts">Heavy Impacts</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:84%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">Recording of a heavy sack hitting the floor from a decent height. Inspired by the phrase "down like a sack ...</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/powerful/">powerful</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sack/">sack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sack-of-spuds/">sack-of-spuds</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/slam/">slam</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/kill/">kill</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/thud/">thud</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/spuds/">spuds</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/ground/">ground</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/impact/">impact</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/floor/">floor</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/collapse/">collapse</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/thump/">thump</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/falling/">falling</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whack/">whack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/kick/">kick</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/body/">body</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hit/">hit</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bass/">bass</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/unconscious/">unconscious</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/beat/">beat</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/smack/">smack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fall/">fall</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/killed/">killed</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sack-of-potatoes/">sack-of-potatoes</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/potatoes/">potatoes</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/drop/">drop</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/chop/">chop</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bag/">bag</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_232358" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/RICHERlandTV/">RICHERlandTV</a><br>
+        <span class="date">April 5th, 2014</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/RICHERlandTV/sounds/232358/downloaders/">15067 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/RICHERlandTV/sounds/232358/#comments">17 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/RICHERlandTV/sounds/232358/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/by.png" width="16" height="16" alt="Creative Commons Attribution license" title="This sound is licensed under the Creative Commons Attribution license.">
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="127197">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/127/127197_162543-lq.mp3" title="mp3 file">fast simple chop 5.aif - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/127/127197_162543-lq.ogg" title="ogg file">fast simple chop 5.aif - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/127/127197_162543_wave_M.png" title="waveform file">fast simple chop 5.aif - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/127/127197_162543_spec_M.jpg" title="spectrogram file">fast simple chop 5.aif - spectrogram</a>
+<span class="duration" title="duration in seconds">500.0</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/127/127197_162543_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:00</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/dave.des/sounds/127197/" title="fast simple chop 5.aif">fast simple chop 5.aif</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:93%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A quick and low "whoosh" or "hit" sound for cinema.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/chop/">chop</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cinema/">cinema</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cinematic/">cinematic</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/film/">film</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/flap/">flap</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hit/">hit</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/jump/">jump</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/move/">move</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swoosh/">swoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whoosh/">whoosh</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_127197" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/dave.des/">dave.des</a><br>
+        <span class="date">August 27th, 2011</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/dave.des/sounds/127197/downloaders/">14637 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/dave.des/sounds/127197/#comments">19 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/dave.des/sounds/127197/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            <a class="pack" href="https://freesound.org/people/dave.des/packs/7933/">
+                <img src="./Freesound - tags_files/folder-open-document-music.png" width="16" height="16" alt="Pack" title="This sound belongs to the pack: Whooshes and Chops">
+            </a>
+            
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                            
+                            <div class="sample_more_search_results"><img src="./Freesound - tags_files/plus.png" alt=""> <a href="https://freesound.org/search/?q=&amp;f=grouping_pack:%227933_Whooshes%20and%20Chops%22%20&amp;s=%22%22&amp;g=&amp;advanced=&amp;a_tag=&amp;a_filename=&amp;a_description=&amp;a_packname=&amp;a_soundid=&amp;a_username=">1 more result</a> in the same pack "Whooshes and Chops"</div>
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="25616">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/25/25616_48671-lq.mp3" title="mp3 file">8 Bit Punch Snare.aif - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/25/25616_48671-lq.ogg" title="ogg file">8 Bit Punch Snare.aif - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/25/25616_48671_wave_M.png" title="waveform file">8 Bit Punch Snare.aif - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/25/25616_48671_spec_M.jpg" title="spectrogram file">8 Bit Punch Snare.aif - spectrogram</a>
+<span class="duration" title="duration in seconds">525.510204082</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/25/25616_48671_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:00</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/Walter_Odington/sounds/25616/" title="8 Bit Punch Snare.aif">8 Bit Punch Snare.aif</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:86%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A punching sound that I thought made a good snare. Has been processed through valve EQ and compression.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/drum/">drum</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/electro/">electro</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/sample/">sample</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/snare/">snare</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_25616" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/Walter_Odington/">Walter_Odington</a><br>
+        <span class="date">November 12th, 2006</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/Walter_Odington/sounds/25616/downloaders/">13759 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/Walter_Odington/sounds/25616/#comments">40 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/Walter_Odington/sounds/25616/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            <a class="pack" href="https://freesound.org/people/Walter_Odington/packs/1580/">
+                <img src="./Freesound - tags_files/folder-open-document-music.png" width="16" height="16" alt="Pack" title="This sound belongs to the pack: Snares">
+            </a>
+            
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                            
+                            <div class="sample_more_search_results"><img src="./Freesound - tags_files/plus.png" alt=""> <a href="https://freesound.org/search/?q=&amp;f=grouping_pack:%221580_Snares%22%20&amp;s=%22%22&amp;g=&amp;advanced=&amp;a_tag=&amp;a_filename=&amp;a_description=&amp;a_packname=&amp;a_soundid=&amp;a_username=">1 more result</a> in the same pack "Snares"</div>
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="264438">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/264/264438_3509815-lq.mp3" title="mp3 file">Woosh - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/264/264438_3509815-lq.ogg" title="ogg file">Woosh - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/264/264438_3509815_wave_M.png" title="waveform file">Woosh - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/264/264438_3509815_spec_M.jpg" title="spectrogram file">Woosh - spectrogram</a>
+<span class="duration" title="duration in seconds">17318.6</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/264/264438_3509815_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:17</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/lebaston100/sounds/264438/" title="Woosh">Woosh</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:92%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A few different woosh Sounds. Can be used as a transition sound. Recorder: Zoom H4n (stereo)(no post processing)</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/wind/">wind</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cut/">cut</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wish/">wish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/transition/">transition</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whoosh/">whoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/woosh/">woosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/zoomh4n/">zoomh4n</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/luft/">luft</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/air/">air</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swhish/">swhish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stick/">stick</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swoosh/">swoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/slide/">slide</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swosh/">swosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bamboo/">bamboo</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swash/">swash</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wisch/">wisch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stereo/">stereo</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_264438" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/lebaston100/">lebaston100</a><br>
+        <span class="date">February 18th, 2015</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/lebaston100/sounds/264438/downloaders/">13380 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/lebaston100/sounds/264438/#comments">29 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/lebaston100/sounds/264438/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/by.png" width="16" height="16" alt="Creative Commons Attribution license" title="This sound is licensed under the Creative Commons Attribution license.">
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="54807">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/54/54807_251523-lq.mp3" title="mp3 file">good kick in the head sound.aif - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/54/54807_251523-lq.ogg" title="ogg file">good kick in the head sound.aif - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/54/54807_251523_wave_M.png" title="waveform file">good kick in the head sound.aif - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/54/54807_251523_spec_M.jpg" title="spectrogram file">good kick in the head sound.aif - spectrogram</a>
+<span class="duration" title="duration in seconds">1210.72916667</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/54/54807_251523_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:01</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/mwl500/sounds/54807/" title="good kick in the head sound.aif">good kick in the head so...</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:80%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A kick in the head sound made by layering up 2 mic stands hitting different pillows.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/body/">body</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/head/">head</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hit/">hit</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/kick/">kick</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/pillow/">pillow</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/thwak/">thwak</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_54807" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/mwl500/">mwl500</a><br>
+        <span class="date">June 4th, 2008</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/mwl500/sounds/54807/downloaders/">11781 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/mwl500/sounds/54807/#comments">14 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/mwl500/sounds/54807/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/by.png" width="16" height="16" alt="Creative Commons Attribution license" title="This sound is licensed under the Creative Commons Attribution license.">
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="184422">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/184/184422_71257-lq.mp3" title="mp3 file">Sword Slash Attack - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/184/184422_71257-lq.ogg" title="ogg file">Sword Slash Attack - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/184/184422_71257_wave_M.png" title="waveform file">Sword Slash Attack - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/184/184422_71257_spec_M.jpg" title="spectrogram file">Sword Slash Attack - spectrogram</a>
+<span class="duration" title="duration in seconds">4727.71</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/184/184422_71257_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:04</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/qubodup/sounds/184422/" title="Sword Slash Attack">Sword Slash Attack</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:85%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">Sword slash/slashing sound. Mix of a whoosh and a metal slice sound and the second version has a blood splatter ...</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/domain/">domain</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/h2/">h2</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/zoom-h2/">zoom-h2</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/woosh/">woosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/zoom/">zoom</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/cut/">cut</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whoosh/">whoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/luft/">luft</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/attack/">attack</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swhish/">swhish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swoosh/">swoosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/public/">public</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/stick/">stick</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/flup/">flup</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wisch/">wisch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swish/">swish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wish/">wish</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/weapon/">weapon</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/public-domain/">public-domain</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/air/">air</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swing/">swing</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swosh/">swosh</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/bamboo/">bamboo</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swash/">swash</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/wind/">wind</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_184422" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/qubodup/">qubodup</a><br>
+        <span class="date">April 10th, 2013</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/qubodup/sounds/184422/downloaders/">11698 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/qubodup/sounds/184422/#comments">20 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/qubodup/sounds/184422/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+             <a class="remixes" href="https://freesound.org/people/qubodup/sounds/184422/remixes/">
+                <img src="./Freesound - tags_files/remixes.png" width="16" height="16" alt="Remixes" title="This sound has remixes">
+            </a>
+            
+            
+            <!-- license icons -->
+            
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/by.png" width="16" height="16" alt="Creative Commons Attribution license" title="This sound is licensed under the Creative Commons Attribution license.">
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                    
+
+
+
+
+
+
+
+<div class="sample_player_small" id="72191">
+
+    
+
+    <div class="sample_player ">
+        <div class="small_player">
+            <div class="player small">
+    <div class="metadata">
+        <a class="mp3_file" href="https://freesound.org/data/previews/72/72191_1070711-lq.mp3" title="mp3 file">whip03.wav - mp3 version</a>
+<a class="ogg_file" href="https://freesound.org/data/previews/72/72191_1070711-lq.ogg" title="ogg file">whip03.wav - ogg version</a>
+<a class="waveform" href="https://freesound.org/data/displays/72/72191_1070711_wave_M.png" title="waveform file">whip03.wav - waveform</a>
+<a class="spectrum" href="https://freesound.org/data/displays/72/72191_1070711_spec_M.jpg" title="spectrogram file">whip03.wav - spectrogram</a>
+<span class="duration" title="duration in seconds">419.637188209</span>
+
+    </div>
+<div class="controls">                     <a href="javascript:void(0)" title="play / pause" class="toggle play">play / pause</a>                     <a href="javascript:void(0)" title="loop" class="toggle loop">loop</a>                 </div>                 <div class="background" style="background-image: url(&quot;/data/displays/72/72191_1070711_wave_M.png&quot;); background-size: contain; background-repeat: no-repeat;"></div>                 <div class="loading-progress" style="display: none;"></div>                 <div class="position-indicator"></div>                 <div class="time-indicator-container"><div class="time-indicator">-00:00</div></div></div>
+
+        </div><!-- .small_player -->
+
+        <div class="sound_title">
+            <div class="sound_filename">
+               <a class="title" href="https://freesound.org/people/snowflakes/sounds/72191/" title="whip03.wav">whip03.wav</a>
+            </div><!-- .sound_filename -->
+            <div class="sound_stars">
+               <ul class="star-rating">
+    <li class="current-rating" style="width:81%;">Currently /5 Stars.</li>
+    
+</ul>
+            </div><!-- .sound_stars -->
+
+            <div class="sound_description">
+                <p class="description">A single whip swoosh sound made by swinging a wooden stick in the air. Recorded with Zoom H2.</p>
+            </div><!-- .sound_description -->
+
+            <div class="sound_tags">
+
+                <ul class="tags">
+                    
+                        <li><a href="https://freesound.org/browse/tags/air/">air</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fighting/">fighting</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/fist/">fist</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/hit/">hit</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/martial-arts/">martial-arts</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/punch/">punch</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/swipe/">swipe</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whip/">whip</a></li>
+                    
+                        <li><a href="https://freesound.org/browse/tags/whoosh/">whoosh</a></li>
+                    
+                </ul>
+                <br style="clear: both;">
+
+            </div><!-- .sound_tags -->
+
+            <div id="bookmark_form_72191" class="bookmark_form"></div> <!-- to be filled dynamically with ajax -->
+
+            
+
+          </div><!-- .sound_title -->
+    </div><!-- .sample_player -->
+
+    <div class="sample_information ">
+        <a class="user" href="https://freesound.org/people/snowflakes/">snowflakes</a><br>
+        <span class="date">May 5th, 2009</span><br>
+        <span class="download_count"><a href="https://freesound.org/people/snowflakes/sounds/72191/downloaders/">11352 downloads</a></span><br>
+        <a class="comments" href="https://freesound.org/people/snowflakes/sounds/72191/#comments">20 comments</a>
+
+        <div class="sound_attributes">
+
+            
+
+            
+            <a class="similar" rel="nofollow" href="https://freesound.org/people/snowflakes/sounds/72191/similar/">
+                <img src="./Freesound - tags_files/headphone--plus.png" width="16" height="16" alt="Similar" title="Similar Sounds">
+            </a>
+            
+            
+            
+            
+            <!-- license icons -->
+            
+            
+                <img class="cc_license" src="./Freesound - tags_files/nolaw.png" width="16" height="16" alt="Public Domain license" title="This sound is public domain.">
+            
+            
+            
+            <!-- /license icons -->
+
+        </div><!-- .sound_attributes -->
+    </div><!-- .sample_information -->
+</div><!-- .sample_player_small -->
+
+
+
+
+
+                    
+                
+                <div class="search_paginator">
+                    <ul class="pagination"><li class="disabled-previous-next">previous</li><li class="next-page"><a href="https://freesound.org/browse/tags/punch/?page=2#sound" title="Next Page">next</a></li><li class="current-page">1</li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=2#sound" title="Page 2">2</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=3#sound" title="Page 3">3</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=4#sound" title="Page 4">4</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=5#sound" title="Page 5">5</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=6#sound" title="Page 6">6</a></li><li class="other-page"><a href="https://freesound.org/browse/tags/punch/?page=7#sound" title="Page 7">7</a></li><li class="dots">...</li><li class="last-page"><a href="https://freesound.org/browse/tags/punch/?page=32#sound" title="Last Page">32</a></li><p class="number_of_results">
+            
+                &nbsp;|&nbsp; 860 sounds
+            
+        </p></ul>
+
+
+                </div>
+            
+
+        
+
+
+    
+
+
+</div> <!-- END of Content area -->
+
+<br class="clear">
+
+
+
+        </div>
+        </div>
+
+    <div id="footer_wrapper">
+        <div id="footer">
+            <div id="cookie-bar">
+                <div style="float:left">
+                    <p>
+                        We use cookies to ensure you get the best experience on our website. By browsing our site you agree to our use of cookies.
+                        <br>
+                        For more information check out our <a href="https://freesound.org/help/cookies_policy">cookies policy</a>.
+                    </p>
+                </div>
+                <div style="float:right; margin-top:10px;margin-right:10px;">
+                    <button id="cookie-accept">Ok</button>
+                </div>
+                <br class="clear">
+
+            </div>
+            <div id="footer_links">
+                <a href="https://freesound.org/help/developers/">Developers</a>
+                <a href="http://blog.freesound.org/">Blog</a>
+                <a href="https://freesound.org/help/about/">About</a>
+                
+                <a href="https://freesound.org/help/tos_web/">Terms of use</a>
+            </div>
+            <div id="footer_credits">
+                Design by <a href="http://www.pixelshell.com/">Pixelshell</a>. Code by <a href="http://www.mtg.upf.edu/">MTG (UPF)</a>. Some Rights Reserved.
+            </div>
+            </div>
+        </div>
+
+        <div id="fsmodal" class="modal"></div>
+    
+
+
+</body></html>
