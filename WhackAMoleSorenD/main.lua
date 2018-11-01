@@ -12,14 +12,14 @@ display.setStatusBar(display.HiddenStatusBar)
 display.setDefault("background", 38/255, 185/255, 165/255)
 
 --creating mole
-local mole = display.newImage( "Images/mole.png", 0, 0)
+local mole = display.newImage( "Images/skeleton.png", 0, 0)
 	--set the position
 	mole.x = display.contentCenterX
 	mole.y = display.contentCenterY
 
 	--scale the mole
-	mole.xScale = 0.2
-	mole.yScale = 0.2
+	mole.xScale = 0.5
+	mole.yScale = 0.5
 
 	--make the mole invisible 
 	mole.isVisible = false

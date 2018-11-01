@@ -88,7 +88,7 @@ local function secondBall()
 	ball2:scale(3, 3)
 
 	--add to physics
-	physics.addBody(ball2, {density=0.5, friction=0.7, bounce=0, radius=15})	
+	physics.addBody(ball2, {density=0.5, friction=0.7, bounce=0, radius=75})	
 end
 
 -----------------------------------------------------------------------------------------
@@ -124,7 +124,7 @@ local function fifthBall()
 	ball5:scale(2, 2)
 
 	--add to physics
-	physics.addBody(ball5, {density=0.6, friction=0.5, bounce=0.9, radius=12.5})	
+	physics.addBody(ball5, {density=0.6, friction=0.5, bounce=0.9, radius=50})	
 end
 
 ------------------------------------------------------------------------------------
